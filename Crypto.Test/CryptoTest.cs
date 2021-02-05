@@ -53,8 +53,14 @@ namespace Crypto.Test
         {
             public IEnumerator GetEnumerator()
             {
-                yield return new object[] { new string[] { "ATTACKATDAWN", "YOUARESOBEAUTIFUL" }, "PASSWORD", new string[] { "PTLSYYRWSAOF", "NOMSNSJRQESMPWWXA" } };
-                yield return new object[] { new string[] { "HELLO", "OLEG" }, "lemon", new string[] { "SIXZB", "ZPQU" } };
+                yield return new object[] { 
+                    new string[] { "ATTACKATDAWN", "YOUARESOBEAUTIFUL" },
+                    "PASSWORD",
+                    new string[] { "PTLSYYRWSAOF", "NOMSNSJRQESMPWWXA" } };
+                yield return new object[] {
+                    new string[] { "HELLO", "OLEG" }, 
+                    "lemon", 
+                    new string[] { "SIXZB", "ZPQU" } };
             }
         }
 
@@ -62,8 +68,14 @@ namespace Crypto.Test
         {
             public IEnumerator GetEnumerator()
             {
-                yield return new object[] { new string[] { "PTLSYYRWSAOF", "NOMSNSJRQESMPWWXA" }, "PASSWORD", new string[] { "ATTACKATDAWN", "YOUARESOBEAUTIFUL" } };
-                yield return new object[] { new string[] { "SIXZB", "ZPQU" }, "LEMON", new string[] { "HELLO", "OLEG" } };
+                yield return new object[] {
+                    new string[] { "PTLSYYRWSAOF", "NOMSNSJRQESMPWWXA" }, 
+                    "PASSWORD", 
+                    new string[] { "ATTACKATDAWN", "YOUARESOBEAUTIFUL" } };
+                yield return new object[] { 
+                    new string[] { "SIXZB", "ZPQU" }, 
+                    "LEMON", 
+                    new string[] { "HELLO", "OLEG" } };
             }
         }
     }

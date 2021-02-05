@@ -6,12 +6,12 @@ namespace Crypto
 {
     public class Vigenere
     {
-        private char[] _alphabet = new char[] {'A', 'B','C','D', 'E',
+        private readonly char[] _alphabet = new char[] {'A', 'B','C','D', 'E',
                                                'F','G','H','I','J',
                                                'K','L','M','N','O',
                                                'P','Q','R','S','T',
                                                'U','V','W','X','Y','Z'};
-        private int N = 26;
+        private const int N = 26;
         public string Encrypt(string source, string key)
         {
             if(key == "")
