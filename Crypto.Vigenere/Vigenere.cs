@@ -11,7 +11,7 @@ namespace Crypto
                                                'K','L','M','N','O',
                                                'P','Q','R','S','T',
                                                'U','V','W','X','Y','Z'};
-        private const int N = 26;
+        private const int _alphabetRange = 26;
         public string Encrypt(string source, string key)
         {
             if(key == "")
@@ -26,7 +26,7 @@ namespace Crypto
             {
                 int indexSymb = Array.IndexOf(_alphabet, symbol);
                 int difference = Array.IndexOf(_alphabet, key[iKey % key.Length]);
-                sb.Append(_alphabet[(indexSymb + difference) % N]);
+                sb.Append(_alphabet[(indexSymb + difference) % _alphabetRange]);
                 iKey++;
             }
             return sb.ToString();
@@ -46,7 +46,7 @@ namespace Crypto
             {
                 int indexSymb = Array.IndexOf(_alphabet, symbol);
                 int difference = Array.IndexOf(_alphabet, key[iKey % key.Length]);
-                sb.Append(_alphabet[Math.Abs(indexSymb + N - difference) % N]);
+                sb.Append(_alphabet[Math.Abs(indexSymb + _alphabetRange - difference) % _alphabetRange]);
                 iKey++;
             }
             return sb.ToString();
